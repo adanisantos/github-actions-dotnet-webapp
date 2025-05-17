@@ -1,0 +1,13 @@
+
+name: Workflow
+on:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 * * * *' # Executa a cada hora
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir mensagem
+        run: echo "Workflow da tarefa do modulo 4 executado!"
